@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background-color: #430808;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  display: flex;
+ 
+}
+.flex-box{
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+    color: aliceblue;
+    font-family: 'Rockabilly';
+    margin-top: .8rem;
+    font-size: 5rem;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
 }
+
+.Burger-logo{
+    height: 32rem;
+    width: 34rem;
+    margin-left: 3rem;
+}
+
+p{
+  color: aliceblue;
+  font-size: 1.3rem;
+  margin-left: 6rem;
+}
+
+.container{
+  position: absolute;
+  background-color: aliceblue;
+  width:25rem;
+  height: 33rem;
+  border-radius: 10px;
+  right: 3rem;
+  margin-top: 10rem;
+  color:#430808;
+  text-align: center;
+}
+#title{
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 10rem
+  
+}
+#pass{
+  font-size: .9rem;
+  position: absolute;
+  top: 15rem;
+  left: 2rem;
+}
+
+#enter{
+  width: 6rem;
+  height: 2.1rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  color: aliceblue;
+  background-color: #430808;
+  position: absolute;
+  top: 24rem;
+  left: 10rem;
+}
+#user{
+  text-align: initial;
+  position: absolute;
+  left: 4rem;
+  top: 10rem;
+  font-size: .9rem;
+}
+.password{
+  position: absolute;
+  background: aliceblue;
+  right: 6.5rem;
+  top: 15.7rem;
+  border-color: transparent;
+  border-bottom-color: #430808;
+}
+.userName{
+  position: absolute;
+  background: aliceblue;
+  right: 6.5rem;
+  top: 10.8rem;
+  border-color: transparent;
+  border-bottom-color: #430808;
+}
+
+
