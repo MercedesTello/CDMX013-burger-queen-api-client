@@ -1,20 +1,20 @@
-import { Routes, Route, Link } from "react-router-dom";
+import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import Login from './Component/Login';
-import  Waiters from './Component/Waiters';
+import Login from "./Component/Login";
+import Waiters from "./Component/Waiters";
 
-  
-  function App() {
-    return (
-      <div className="App">
-        <h1>Welcome to React Router!</h1>
+function App() {
+  return (
+
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="waiters" element={<Waiters />} />
+          <Route path="/waiters" element={<Waiters />} />
+          
         </Routes>
-      </div>
-    );
-  }
-
+      </BrowserRouter>
+  );
+}
 
 export default App;

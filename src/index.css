@@ -22,6 +22,7 @@ h1{
     height: 32rem;
     width: 34rem;
     margin-left: 3rem;
+    font-weight: normal;
 }
 
 p{
@@ -80,7 +81,7 @@ p{
   border-color: transparent;
   border-bottom-color: #430808;
 }
-.userName{
+.email{
   position: absolute;
   background: aliceblue;
   right: 6.5rem;
@@ -89,4 +90,19 @@ p{
   border-bottom-color: #430808;
 }
 
-
+.breakfasts, .lunches{
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 16px;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #430808;
+}
+.burgerTitle{
+  margin-left: 48rem;
+  margin-top: -1rem;
+  font-weight: normal;
+}
