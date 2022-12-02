@@ -1,30 +1,27 @@
-
+import React,{useState} from "react";
+import { VscChevronLeft, VscChevronRight}  from "react-icons/vsc";
+import Menu from "./context/menu";
+import Comandas from "./context/comandas.js/Comandas";
+import Orders from "./context/comandas.js/Orders";
 
 const Waiters= () => {
+
+  const [selectedProductType, setSelectedProducType] = useState('Desayuno');
+
     return (
         <div className="flex-box">
         <div className="main">
+          <VscChevronLeft/>
+          <VscChevronRight id="right"/>
           <h1 className="burgerTitle">Burger Queen </h1>
-          <button className="breakfasts">
-            Desayunos
-          </button>
-          <button className="lunches">
-            Almuerzos
-          </button>
+          <Menu setSelectedProducType={setSelectedProducType}/>
          <div className="breakfast menu">
-            
-         {/*</div>
-        <div className="main">
-          <div className="section">
-            <input id="client"> Cliente</input>
-            <input id="date">fecha</input>
-            <input id="time">Hora</input>
-            <input>Id Empleado</input>
-            <input>Producto</input>
-            <input>contador</input>
-            <button>incrementar</button>
-    <button>delete</button>*/}
-
+            <section id="lunch">
+              <Comandas selectedProductType={selectedProductType}/>
+              <Orders/>
+              
+            </section>   
+         
 
 
           </div>

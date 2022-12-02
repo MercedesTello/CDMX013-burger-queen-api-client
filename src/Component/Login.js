@@ -59,20 +59,18 @@ function Login() {
       });
   };
 
-  useEffect(() => {
-  
-  }, []);
+  useEffect(() => {}, []);
 
   useEffect(() => {
     //console.log("shoy indefinio");
-    if (user !== undefined) {
-      //console.log("ya no soy indefinido", user);
-      if (user.rol === "waiter") {
-        navigate("/waiters");
-      }
-      if (user.rol === "Admin") {
-        navigate("/admin");
-      }
+      if (user !== undefined) {
+        //console.log("ya no soy indefinido", user);
+        if (user.rol === "waiter") {
+          navigate("/waiters");
+        }
+        if (user.rol === "Admin") {
+          navigate("/admin");
+        }
     }
   }, [user]);
 
@@ -84,7 +82,7 @@ function Login() {
         <p>Somos la plataforma que levanta pedidos</p>
       </div>
       <div className="container">
-        <form onSubmit={(e) => {}}>
+        <form>
           <h3 id="title">Login {user ? `hola ${user.name}` : null} </h3>
           <h3 id="user">Correo</h3>
           <input
