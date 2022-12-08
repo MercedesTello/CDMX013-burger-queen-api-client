@@ -1,26 +1,37 @@
-import React from "react";
-import { VscTrash,VscAdd } from "react-icons/vsc";
-const Orders =()=>{
+import React, { useReducer } from "react";
+import { useState } from "react";
 
-    return(
-        <form id="orderData"onSubmit={(e) => {}}>
-                <button id="dates">01-01-2023</button>
-                <button id="hours">10:00:05</button>
-                <h3 id="nameClient">cliente</h3>
-                <input id="client"></input>
-                <h3 id="idWaiter">Id-Empleado</h3>
-                <input id="waiter"></input>
-                <h3 id="one">producto1</h3>
-                <input id="productOne"></input>
-                <input id="sum"></input>
-                <VscAdd id="increment"/>
-                <VscTrash id="trash"/>
-                <span id="result">Total$</span>
-                <input id="resultSum"></input>
-                <button id="delete">Borrar</button>
-                <button id="send">Envío a cocina</button>
+const Food = ({ order }) => {
+  const [nameClient, setNameClient] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(nameClient);
+  };
 
-              </form>
-    )
-}
-export default Orders;
+  return (
+    <form id="orderData" onSubmit={handleSubmit}>
+      <input id="dates" type="date"></input>
+      <input id="hours" type="time"></input>
+      <p id="nameClient">cliente</p>
+      <input id="client" onChange={(e) => setNameClient(e.target.value)} />
+      <p id="nameWaiter">Mesero</p>
+      <input id="idWaiter"></input>
+      
+        {order.items.map((product) => (
+          <div className= "food" key={product.item.name }>
+            <p className="one">{product.item.name}</p>
+            <input className="productOne" value={product.qty}></input>
+            <button className="sum">+</button>
+            <button className="trash"></button>
+          </div>
+        ))}
+      
+
+      <p id="result">Total$</p>
+      <input id="resultSum"></input>
+      <button id="delete">Borrar</button>
+      <button id="send">Envío a cocina</button>
+    </form>
+  );
+};
+export default Food;

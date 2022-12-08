@@ -79,7 +79,7 @@ function Login() {
       <div className="main">
         <h1>Burger Queen </h1>
         <img src={burger} className="Burger-logo" alt="logo" />
-        <p>Somos la plataforma que levanta pedidos</p>
+        <p id="description">Somos la plataforma que levanta pedidos</p>
       </div>
       <div className="container">
         <form>

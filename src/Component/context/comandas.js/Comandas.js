@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-const Comandas = ({ selectedProductType }) => {
+const Comandas = ({ selectedProductType, handleAddItem }) => {
   const [products, setProducts] = useState([]);
   const [lunch, setLunch] = useState([]);
 
@@ -14,25 +14,40 @@ const Comandas = ({ selectedProductType }) => {
       .then((response) => response.json())
       .then((allLunch) => setLunch(allLunch));
   }, []);
-  console.log(products);
+
   return (
     <div className="allLunch">
       {selectedProductType === "Desayuno"
         ? products.map((product) => (
-            <p key={product.id} className="nameLunch">
-              {product.name}
-              <span>{product.price}</span>
-              <img className="pequeña" src={product.image} />
-            </p>
+            <button
+              className="nameLunch"
+              onClick={() => {
+                handleAddItem(product);
+              }}
+            >
+              <p>
+                {product.name}
+                <span>${product.price}</span>
+                <img className="pequeña" src={product.image} alt=""/>
+              </p>
+            </button>
           ))
         : null}
       {selectedProductType === "Almuerzo"
         ? lunch.map((lunch) => (
-            <p key={lunch.id} className="Lunchs">
-              {lunch.name}
-              <span>{lunch.price}</span>
-              <img className="pequeña" src={lunch.image} />
-            </p>
+            <button
+              className="Lunchs"
+              onClick={() => {
+                handleAddItem(lunch);
+              }}
+              key={lunch.id}
+            >
+              <p>
+                {lunch.name}
+                <span>${lunch.price}</span>
+                <img className="pequeña" src={lunch.image} alt=""/>
+              </p>
+            </button>
           ))
         : null}
     </div>
