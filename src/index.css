@@ -1,13 +1,354 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #430808;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  display: flex;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flex-box {
+  display: flex;
+}
+
+h1 {
+  color: aliceblue;
+  font-family: 'Rockabilly';
+  margin-top: .8rem;
+  font-size: 5rem;
+  font-weight: normal;
+  margin-left: 6rem;
+  margin-bottom: 1rem;
+}
+
+.Burger-logo {
+  height: 32rem;
+  width: 34rem;
+  margin-left: 3rem;
+  font-weight: normal;
+}
+
+#description {
+  font-size: 1.3rem;
+  font-weight: 750;
+  margin-left: 1rem;
+  font-weight: bolder;
+  margin-top: 0.1rem;
+  color: aliceblue;
+}
+
+p {
+  font-size: .9rem;
+  font-weight: 750;
+  margin-left: 1rem;
+  font-weight: bolder;
+  margin-top: 0.1rem;
+}
+
+.container {
+  position: absolute;
+  background-color: aliceblue;
+  width: 25rem;
+  height: 33rem;
+  border-radius: 10px;
+  right: 3rem;
+  margin-top: 10rem;
+  color: #430808;
+  text-align: center;
+}
+
+#title {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 10rem
+}
+
+#pass {
+  font-size: .9rem;
+  position: absolute;
+  top: 15rem;
+  left: 2rem;
+}
+
+#enter {
+  width: 6rem;
+  height: 2.1rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  color: aliceblue;
+  background-color: #430808;
+  position: absolute;
+  top: 24rem;
+  left: 10rem;
+}
+
+#user {
+  text-align: initial;
+  position: absolute;
+  left: 3.5rem;
+  top: 10rem;
+  font-size: .9rem;
+}
+
+.password {
+  position: absolute;
+  background: aliceblue;
+  right: 6.5rem;
+  top: 15.7rem;
+  border-color: transparent;
+  border-bottom-color: #430808;
+}
+
+.email {
+  position: absolute;
+  background: aliceblue;
+  right: 6.5rem;
+  top: 10.8rem;
+  border-color: transparent;
+  border-bottom-color: #430808;
+}
+
+.breakfasts {
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 16px;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #430808;
+}
+
+.lunches {
+
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 16px;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #430808;
+}
+
+.burgerTitle {
+  margin-left: 48rem;
+  margin-top: -1.5999999999999996rem;
+  font-weight: normal;
+}
+
+#lunch {
+  width: 33rem;
+  height: 28rem;
+  background-color: #f0f8ffa3;
+  margin-left: 4.5rem;
+  margin-top: 5rem;
+  border-radius: 1.5rem;
+}
+
+#orderData {
+  width: 26rem;
+  position: absolute;
+  height: 35rem;
+  background-color: aliceblue;
+  margin-left: 40rem;
+  border-radius: 1rem;
+  margin-top: -5rem;
+}
+
+#nameClient {
+  text-align: initial;
+  position: absolute;
+  font-size: 1rem;
+  left: 1rem;
+  top: 0.5rem;
+}
+
+#nameWaiter {
+  text-align: initial;
+  position: absolute;
+  font-size: .9rem;
+  left: 1rem;
+  top: 4rem;
+}
+
+#idWaiter {
+  position: absolute;
+  background: #f0f8ffd9;
+  border-color: transparent;
+  border-bottom-color: #430808;
+  top: 4rem;
+  left: 5.4rem;
+  width: 9rem;
+}
+
+#client {
+  position: absolute;
+  background: #f0f8ffd9;
+  border-color: transparent;
+  border-bottom-color: #430808;
+  top: 1.3000000000000007rem;
+  left: 5rem;
+  width: 9rem;
+}
+
+
+.back {
+  background-image: url('./Component/Image/back.jpg');
+  position: absolute;
+  width: 2rem;
+  height: 1rem;
+}
+
+.nameLunch {
+  margin-left: 3rem;
+  border-radius: 10px;
+  width: 8rem;
+  height: 8rem;
+  color: #430808;
+  box-shadow: 3px 3px #0000008f;
+}
+
+img.pequeña {
+  width: 5rem;
+  margin-left: -1rem;
+  margin-top: -0.10000000000000009rem;
+}
+
+.allLunch {
+  display: flex;
+  position: absolute;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  margin-right: 31.6rem;
+  margin-left: -1.9000000000000004rem;
+  row-gap: 1.5rem;
+  top: 18rem;
+}
+
+svg {
+  margin: 0 auto;
+  width: 3rem;
+  height: 1.5rem;
+  color: aliceblue;
+}
+
+#right {
+  color: aliceblue;
+  display: flex;
+  position: absolute;
+  left: 71rem;
+  top: 0.5rem;
+
+}
+
+.food {
+  display: flex;
+  margin-bottom: -8rem;
+}
+
+.one {
+  margin-top: 9rem;
+  margin-left: 2.4rem;
+  font-size: .9rem;
+  width: 15rem;
+  color: #420808;
+}
+
+.productOne {
+  margin-top: -46rem;
+  height: 1.2rem;
+  margin-top: 9rem;
+  width: 1.2rem;
+  border-radius: 8px;
+  border-bottom: currentColor;
+}
+
+.sum {
+  height: 1.6rem;
+  margin-top: 9rem;
+  margin-left: 0.3rem;
+  border-radius: 8px;
+  width: 1.6rem;
+}
+
+.trash {
+  height: 1.6rem;
+  width: 2em;
+  margin-top: 9rem;
+  margin-left: 0.4rem;
+  background-image: url(./Component/Image/trash.png);
+  background-size: cover;
+  border-radius: 5px;
+}
+
+#result {
+  position: absolute;
+  top: 27.5rem;
+  left: 12rem;
+}
+
+#resultSum {
+  position: absolute;
+  top: 17.299999999999997rem;
+  top: 27.299999999999997rem;
+  left: 16rem;
+  width: 5rem;
+  background-color: aliceblue;
+  border-color: transparent;
+  border-bottom-color: #430808;
+}
+
+#dates {
+  position: absolute;
+  width: 6rem;
+  height: 1.3rem;
+  border-radius: 16px;
+  left: 19rem;
+  top: 1rem;
+  box-shadow: 8px 8px 10px 0;
+  color: grey;
+}
+
+#hours {
+  position: absolute;
+  width: 6rem;
+  height: 1.3rem;
+  border-radius: 16px;
+  left: 19rem;
+  top: 3rem;
+  box-shadow: 8px 8px 10px 0;
+  color: grey;
+}
+
+#delete {
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background-color: #430808;
+  color: aliceblue;
+  position: absolute;
+  top: 31rem;
+  left: 3rem;
+}
+
+#send {
+  position: absolute;
+  width: 7rem;
+  margin-left: 16rem;
+  top: 31rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background-color: #430808;
+  color: aliceblue;
+}
+
+.Lunchs {
+  margin-left: 3rem;
+  border-radius: 10px;
+  width: 8rem;
+  height: 8rem;
+  color: #430808;
+  box-shadow: 3px 3px #0000008f;
 }
