@@ -36,7 +36,7 @@ h1 {
   color: aliceblue;
 }
 
-p {
+label {
   font-size: .9rem;
   font-weight: 750;
   margin-left: 1rem;
@@ -188,8 +188,8 @@ p {
   background: #f0f8ffd9;
   border-color: transparent;
   border-bottom-color: #430808;
-  top: 1.3000000000000007rem;
-  left: 5rem;
+  top: 0.3000000000000007rem;
+  left: 5.8rem;
   width: 9rem;
 }
 
@@ -252,7 +252,16 @@ svg {
   margin-top: 9rem;
   margin-left: 2.4rem;
   font-size: .9rem;
-  width: 15rem;
+  width: 13rem;
+  color: #420808;
+}
+
+.price {
+  margin-top: 9rem;
+  font-size: .9rem;
+  width: 7rem;
+  margin-right: 2rem;
+  margin-left: 0rem;
   color: #420808;
 }
 
@@ -263,6 +272,7 @@ svg {
   width: 1.2rem;
   border-radius: 8px;
   border-bottom: currentColor;
+  margin-left: -6rem;
 }
 
 .sum {
@@ -295,9 +305,8 @@ svg {
   top: 27.299999999999997rem;
   left: 16rem;
   width: 5rem;
-  background-color: aliceblue;
-  border-color: transparent;
-  border-bottom-color: #430808;
+  color:#420808;
+ 
 }
 
 #dates {
@@ -305,7 +314,7 @@ svg {
   width: 6rem;
   height: 1.3rem;
   border-radius: 16px;
-  left: 19rem;
+  left: 18rem;
   top: 1rem;
   box-shadow: 8px 8px 10px 0;
   color: grey;
@@ -316,7 +325,7 @@ svg {
   width: 6rem;
   height: 1.3rem;
   border-radius: 16px;
-  left: 19rem;
+  left: 18rem;
   top: 3rem;
   box-shadow: 8px 8px 10px 0;
   color: grey;

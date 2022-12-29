@@ -71,6 +71,9 @@ function Login() {
         if (user.rol === "Admin") {
           navigate("/admin");
         }
+        if(user.rol === "kitchen assistant"){
+          navigate("kitchen")
+        };
     }
   }, [user]);
 
