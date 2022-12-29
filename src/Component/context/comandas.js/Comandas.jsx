@@ -24,12 +24,13 @@ const Comandas = ({ selectedProductType, handleAddItem }) => {
               onClick={() => {
                 handleAddItem(product);
               }}
+              key={product.id}
             >
-              <p>
+              <label>
                 {product.name}
                 <span>${product.price}</span>
                 <img className="pequeña" src={product.image} alt=""/>
-              </p>
+              </label>
             </button>
           ))
         : null}
@@ -41,7 +42,7 @@ const Comandas = ({ selectedProductType, handleAddItem }) => {
                 handleAddItem(lunch);
               }}
               key={lunch.id}
-            >
+              >
               <p>
                 {lunch.name}
                 <span>${lunch.price}</span>
