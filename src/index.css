@@ -305,8 +305,8 @@ svg {
   top: 27.299999999999997rem;
   left: 16rem;
   width: 5rem;
-  color:#420808;
- 
+  color: #420808;
+
 }
 
 #dates {
@@ -360,4 +360,20 @@ svg {
   height: 8rem;
   color: #430808;
   box-shadow: 3px 3px #0000008f;
+}
+
+.orderList {
+  display: flex;
+  position: absolute;
+  background: hwb(0deg 90% 6% / 57%);
+  width: 25rem;
+  height: 32rem;
+  border-radius: 20px;
+  top: 13rem;
+  left: 5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#status{
+  background-color: blueviolet;
 }

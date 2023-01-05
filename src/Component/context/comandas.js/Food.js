@@ -9,7 +9,8 @@ const Food = ({ order, setOrder }) => {
     products: [],
   });
 
-  const handleSubmit = async() => {
+  const handleSubmit = async(e) => {
+    e.preventDefault()
 
     // setOrder((prevOrder)=>({ ...prevOrder, client: nameClient}));// Lu
     // console.log(nameClient);
@@ -28,13 +29,17 @@ const Food = ({ order, setOrder }) => {
     // })
     const config = {
       method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
-        name:'yo',
-        cosa: 'm',
+        client: nameClient,
+        products: order.items,
+        status: "cooking",
       }),
     };
 
-    await fetch("https://63799c1e7eb4705cf282218b.mockapi.io/ejemplo",config)
+    await fetch("https://63799c1e7eb4705cf282218b.mockapi.io/test", config)
     
     //   method: "POST",
     //   // body: JSON.stringify(data),
@@ -98,8 +103,7 @@ const Food = ({ order, setOrder }) => {
   };
 
   return (
-    <form id="orderData">
-      {/* onSubmit={handleSubmit} */}
+    <form id="orderData" onSubmit={handleSubmit}>
       <p id="dates">{date}</p>
       <p id="hours">{time}</p>
       <p id="nameClient">cliente</p>
@@ -127,7 +131,7 @@ const Food = ({ order, setOrder }) => {
           <p id="result">Total$</p>
           <p id="resultSum">$ {totalPrice()}</p>
           <button id="delete">Borrar</button>
-          <button id="send" onClick={()=> handleSubmit()}>
+          <button type="submit" id="send">
             Envío a cocina
           </button>
         </div>
